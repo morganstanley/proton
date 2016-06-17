@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: proton-game-hermes
+spec:
+  replicas: 2
+  selector:
+    app: proton-game-hermes
+  template:
+    metadata:
+      name: proton-game-hermes
+      labels:
+        app: proton-game-hermes
+    spec:
+      containers:
+      - name: proton-game-hermes
+        image: us.gcr.io/proton-framework/proton-game-hermes
+        command: 
+        - /app/bin/proton-game-hermes
+        - --file 
+        - hermes-prod.conf
+        ports:
+        - name: admin
+          containerPort: 8080
+        - name: player
+          containerPort: 10001
