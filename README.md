@@ -1,5 +1,7 @@
 # Proton
 
+![Lifecycle Archived](https://badgen.net/badge/Lifecycle/Archived/grey)
+
 A framework for hackathon style game concepts.
 
 ## Getting Started
